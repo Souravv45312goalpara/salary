@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Salary Budget Calculator</title>
+</head>
+
+<body="body">
+
+<h2>💰 Salary Budget Calculator</h2>
+
+<div id="Color"><input type="number" id="salary" placeholder="Enter Monthly Salary">
+<button onclick="calculateBudget()" id="saja">Calculate</button>
+</div>
+<div id="result"></div>
+</body>
+<style>
+.salary {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid;
+    height: 202px;
+    width: 300px;
+    border-radius: 50px;
+    margin: 130px 42px 35px 681px;
+}
+input {
+padding: 10px;
+margin-right: 10px;
+width: 200px;
+}
+button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: pointer;
+}
+button:hover {
+background-color: #45a049;
+}   
+#result {
+margin-top: 20px;
+}
+</style>
+<script>
+// function calculateBudget(){
+// document.getElementById("body").style.height = "602px";
+// }
+let btn = document.querySelector("body");
+btn.addEventListener("click", function() {
+            btn.style.height = "602px";
+});
+function calculate(){
+
+let sala = document.getElementById("saja").value;
+
+if(sala === ""){
+    alert("Please enter salary");
+    return;
+}}
+function calculateBudget(){
+
+let salary = document.getElementById("salary").value;
+
+// Saving & Investment (30%)
+let bank = salary * 0.10;
+let sip = salary * 0.15;
+let emergency = salary * 0.05;
+
+// Needs (50%)
+let rent = salary * 0.20;
+let food = salary * 0.15;
+let transport = salary * 0.10;
+let study = salary * 0.05;
+
+// Wants / Lifestyle (20%)
+let travel = salary * 0.08;
+let movies = salary * 0.05;
+let eating = salary * 0.04;
+let hobbies = salary * 0.03;
+
+document.getElementById("result").innerHTML =
+
+"<h3>Saving & Investment (30%)</h3>" +
+"Bank Savings: ₹" + bank + "<br>" +
+"SIP / Mutual Fund: ₹" + sip + "<br>" +
+"Emergency Fund: ₹" + emergency + "<br><br>" +
+
+"<h3>Needs (50%)</h3>" +
+"Rent / Hostel: ₹" + rent + "<br>" +
+"Food: ₹" + food + "<br>" +
+"Transport: ₹" + transport + "<br>" +
+"Study Materials: ₹" + study + "<br><br>" +
+
+"<h3>Wants / Lifestyle (20%)</h3>" +
+"Travel: ₹" + travel + "<br>" +
+"Movies / Entertainment: ₹" + movies + "<br>" +
+"Eating Outside: ₹" + eating + "<br>" +
+"Hobbies & Activities: ₹" + hobbies;
+
+}
+
+</script>
+
+
+</html>
